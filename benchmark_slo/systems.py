@@ -67,6 +67,7 @@ def _default_engine_factory(system_name: str, args: Any):
         correction_factor=getattr(args, "correction_factor", 1.0),
         enable_double_buffering=(system_name == "slopearl"),
     )
+    config.pearl_config.gamma = getattr(args, "gamma", 4)
     return SLOPearlEngine(config)
 
 
