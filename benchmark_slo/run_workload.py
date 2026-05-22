@@ -27,6 +27,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--min-gamma", type=int, default=1)
     parser.add_argument("--correction-factor", type=float, default=1.0)
     parser.add_argument("--enforce-eager", action="store_true")
+    parser.add_argument("--gamma", type=int, default=4)
     return parser.parse_args()
 
 

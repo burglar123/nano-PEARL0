@@ -48,6 +48,7 @@ def _default_engine_factory(system_name: str, args: Any):
             max_num_seqs=getattr(args, "max_num_seqs", 128),
             gpu_memory_utilization=getattr(args, "gpu_memory_utilization", 0.9),
             enforce_eager=getattr(args, "enforce_eager", True),
+            gamma=getattr(args, "gamma", 4),
         )
         return PEARLEngine(config)
 
